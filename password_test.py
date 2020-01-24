@@ -44,6 +44,26 @@ def test_delete_user(self):
     self.new_user.delete_user()
     self.assertEqual(len(User.user_list),1)
     
+class TestCredential(unittest.TestCase):
+    '''
+    Test class that defines test cases for the credential class behaviours.
+
+    Args:
+        unittest.TestCase: TestCase class that helps in creating test cases
+    '''
+    
+    def setUp(self):
+        self.new_credential = Credential("facebook","bettyg","12345")
+        
+    def test_init(self):
+        self.assertEqual(self.new_credential.account,"facebook")
+        self.assertEqual(self.new_credential.account_username,"bettyg")
+        self.assertEqual(self.new_credential.account_password,"12345")
+        
+        
+    
+    
+    
 
 
 if __name__ == '__main__':
