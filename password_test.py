@@ -23,7 +23,12 @@ def test_save_user(self):
     '''
     self.new_user.save_user() # saving the new users
     self.assertEqual(len(User.user_list), 1)
-
+    
+def test_save_multiple_users(self):
+    self.new_user.save_user()
+    test_user = User("Gakii", "12345")
+    test_user.save_user()
+    self.assertEqual(len(User.user_list), 2)
 
     
 if __name__ == '__main__':
