@@ -14,3 +14,6 @@ def setUp(self):
 def test_init(self):
     self.assertEqual(self.new_user.user_name, "Betty")
     self.assertEqual(self.new_user.user_password, "12056")
+    
+if __name__ == '__main__':
+    unittest.main()
