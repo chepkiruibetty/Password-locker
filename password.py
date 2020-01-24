@@ -38,5 +38,9 @@ class Credential:
         """
         Credential.credential_list.append(self)
 
-    # def test_save_credential(self):
-    #     pass
+    def delete_credential(self):
+        """
+        delete_credential method deletes saved contact
+        """
+        Credential.credential_list.remove(self)
+
