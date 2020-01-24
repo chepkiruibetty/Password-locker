@@ -45,6 +45,6 @@ def test_delete_user(self):
     self.assertEqual(len(User.user_list),1)
     
 
-   
+
 if __name__ == '__main__':
     unittest.main()
