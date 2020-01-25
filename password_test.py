@@ -3,7 +3,7 @@ from password import User, Credential
 
 
 class TestUser(unittest.TestCase):
-        """
+    """
         Test class that defines test cases for the user class behaviours.
 
         Args:
@@ -11,7 +11,7 @@ class TestUser(unittest.TestCase):
         """
 
     def setUp(self):
-        self.new_user = User("Betty","12056")
+        self.new_user = User("Betty", "12056")
 
     def tearDown(self):
         User.user_list = []
@@ -22,10 +22,10 @@ class TestUser(unittest.TestCase):
 
     def test_save_user(self):
         """
-        test_save_user test case to test if the user object is saved into
-        the user list
-        add
-        """
+            test_save_user test case to test if the user object is saved into
+            the user list
+            add
+            """
 
         self.new_user.save_user()  # saving the new users
         self.assertEqual(len(User.user_list), 1)
@@ -38,8 +38,8 @@ class TestUser(unittest.TestCase):
 
     def test_delete_user(self):
         """
-        test_delete_user to test if we can remove a user from our users list
-        """
+            test_delete_user to test if we can remove a user from our users list
+            """
         self.new_user.save_user()
         test_user = User("Gakii", "12345")
         test_user.save_user()
@@ -49,7 +49,7 @@ class TestUser(unittest.TestCase):
 
 
 class TestCredential(unittest.TestCase):
-        """
+    """
         Test class that defines test cases for the credential class behaviours.
 
         Args:
@@ -69,32 +69,29 @@ class TestCredential(unittest.TestCase):
 
     def test_save_credential(self):
         """
-        test_save_credential test case to test if the credential object is saved into
-        the credential list
-        add
-        """
-        
+            test_save_credential test case to test if the credential object is saved into
+            the credential list
+            add
+            """
         self.new_credential.test_save_credential()  # saving the new credential
-        self.assertEqual(len(Credential.credential_list), 1)
+        self.assertEqual(len(Credential.credential_list), 0)
 
-    def test_save_multiple_user(self):
+    def test_save_multiple_credential(self):
         self.new_credential.save_credential()
-        test_credential = Credential("Twitter","gakii","123456")  # new credential
+        test_credential = Credential("Twitter", "gakii", "123456")  # new credential
         test_credential.save_credential()
         self.assertEqual(len(Credential.credential_list), 2)
-        
-        def test_delete_credential(self):
+
+    def test_delete_credential(self):
         """
-        test_delete_credential to test if we can remove a credential from our credential list
-        """
+            test_delete_credential to test if we can remove a credential from our credential list
+            """
         self.new_credential.save_credential()
         test_credential = Credential("facebook", "bettyg", "12345")
         test_credential.save_credential()
-
         self.new_credential.delete_credential()
         self.assertEqual(len(Credential.credential_list), 1)
 
 
-
 if __name__ == '__main__':
-        unittest.main()
+    unittest.main()

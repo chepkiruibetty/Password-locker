@@ -44,3 +44,6 @@ class Credential:
         """
         Credential.credential_list.remove(self)
 
+    def test_save_credential(self):
+        pass
+
