@@ -52,4 +52,10 @@ class Credential:
         for credential in cls.credential_list:
             if credential.account_username == account_username:
                 return credential
+    @classmethod
+    def credential_exists(cls, account_username):
+        for credential in cls.credential_list:
+            if credential.account_username == account_username:
+                return True
+            return False
 
