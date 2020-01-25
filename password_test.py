@@ -104,6 +104,9 @@ class TestCredential(unittest.TestCase):
         test_credential.save_credential()
         credential_exists = Credential.credential_exists("bettyg")
         self.assertTrue(credential_exists)
+        
+    def test_display_all_credentials(self):
+        self.assertEqual(Credential.display_credentials(), Credential.credential_list)
 
 if __name__ == '__main__':
     unittest.main()
