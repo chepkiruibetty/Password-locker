@@ -84,14 +84,19 @@ class TestCredential(unittest.TestCase):
 
     def test_delete_credential(self):
         """
-            test_delete_credential to test if we can remove a credential from our credential list
-            """
+        test_delete_credential to test if we can remove a credential from our credential list
+        """
         self.new_credential.save_credential()
         test_credential = Credential("facebook", "bettyg", "12345")
         test_credential.save_credential()
         self.new_credential.delete_credential()
-        self.assertEqual(len(Credential.credential_list), 1)
-
+        self.assertEqual(len(Credential.credential_list),1)
+    def test_find_credential_by_account_username(self):
+        self.new_credential.save_credential()
+        test_credential = Credential("facebook", "bettyg", "12345")
+        test_credential.save_credential()
+        found_credential = Credential.find_by_account_username("bettyg")
+        self.assertEqual(found_credential.account_password, test_credential.account_password)
 
 if __name__ == '__main__':
     unittest.main()

@@ -46,4 +46,10 @@ class Credential:
 
     def test_save_credential(self):
         pass
+    
+    @classmethod
+    def find_by_account_username(cls, account_username):
+        for credential in cls.credential_list:
+            if credential.account_username == account_username:
+                return credential
 
