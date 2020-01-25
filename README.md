@@ -68,7 +68,7 @@ chepkiruibetty64@gmail.com
 
 ### Code beat
 
-- [![codebeat badge](https://codebeat.co/badges/5a24d588-5897-44e2-a38c-a1794cca1094)](https://codebeat.co/projects/github-com-kiprotichdominic-password-locker-master)
+- [![codebeat badge](https://codebeat.co/badges/a4834ad7-9168-4fcd-87ee-6305c883b8b8)](https://codebeat.co/projects/github-com-chepkiruibetty-password-locker-betty-password)
 
 ### License
 - [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
