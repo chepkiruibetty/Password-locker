@@ -129,7 +129,7 @@ def main():
             f"Hello {user_name}. Do you want a generated password? YES/N0 > ")
         if create == "no":
             print("-"*87)
-            print("|Don't mind if your password is not visible as you type. WE go your password secured.|")#
+            print("|Don't don't recommend visible passwords..Don't stress up! WE got your password secured.|")#
             print("-"*87)
             getpass.getpass()
             print("YOU ARE NOW LOGGED IN")
