@@ -128,9 +128,7 @@ def main():
         create = input(
             f"Hello {user_name}. Do you want a generated password? YES/N0 > ")
         if create == "no":
-            print("-"*87)
-            print("|Don't don't recommend visible passwords..Don't stress up! WE got your password secured.|")#
-            print("-"*87)
+            print("|PASSWORD HIDDEN DON'T WORRY|")
             getpass.getpass()
             print("YOU ARE NOW LOGGED IN")
         elif create == "yes":
@@ -162,7 +160,6 @@ def main():
 
             if short_code == "cc":
                 print(" Create account")
-                print("-" * 10)
 
                 print("Account ....")
                 account = input("> ")
@@ -241,9 +238,7 @@ def main():
     elif ask == "yes":
         print("Welcome back to our password locker. Enter your username and password to login")
         user_name = input("Enter username > ")
-        print("-"*87)
-        print("|Don't mind if your password is not vissible as you type. WE go your password secured.|")#
-        print("-"*87)
+        print("|Password Hidden. WE got you.|")#
         account_password= getpass.getpass()
         while True:
             print("""
@@ -259,7 +254,6 @@ def main():
 
             if short_code == "cc":
                 print(" Create account")
-                print("-" * 10)
 
                 print("Account ....")
                 account = input("> ")
