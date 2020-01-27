@@ -134,16 +134,16 @@ def main():
             getpass.getpass()
             print("YOU ARE NOW LOGGED IN")
         elif create == "yes":
-            # def random_password(string_length):
-            #     """
-            #     Parameters
-            #     ----------
-            #     string_length
-            #     Returns
-            #     -------
-            #     """
-            #     letters = string.ascii_letters
-            #     return "".join(random.choice(letters) for i in range(string_length))
+            def random_password(string_length):
+                """
+                Parameters
+                ----------
+                string_length
+                Returns
+                -------
+                """
+                letters = string.ascii_letters
+                return "".join(random.choice(letters) for i in range(string_length))
 
             print(
                 f"Your random password is: ", random_password(8))
