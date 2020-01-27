@@ -115,7 +115,7 @@ def main():
     Returns
     -------
     """
-    # global account_password
+    global account_password
     user_name = input("Enter your name > ")
 
     print(f"Hello {user_name}, welcome to password locker")
@@ -133,21 +133,21 @@ def main():
             print("-"*87)
             getpass.getpass()
             print("YOU ARE NOW LOGGED IN")
-        # elif create == "yes":
-        #     def random_password(string_length):
-        #         """
-        #         Parameters
-        #         ----------
-        #         string_length
-        #         Returns
-        #         -------
-        #         """
-        #         letters = string.ascii_letters
-        #         return "".join(random.choice(letters) for i in range(string_length))
+        elif create == "yes":
+            # def random_password(string_length):
+            #     """
+            #     Parameters
+            #     ----------
+            #     string_length
+            #     Returns
+            #     -------
+            #     """
+            #     letters = string.ascii_letters
+            #     return "".join(random.choice(letters) for i in range(string_length))
 
-        #     print(
-        #         f"Your random password is: ", random_password(8))
-        #     print("You are now logged in: ")
+            print(
+                f"Your random password is: ", random_password(8))
+            print("You are now logged in: ")
         while True:
             print("""
             USE THE SHORT CODES
@@ -231,7 +231,7 @@ def main():
                 print("Enter the account username of the credential you would like to delete.")
                 my_delete = input("> ")
                 my_del = find_credential(my_delete)
-                Credential.credential_list.remove(my_del)
+                delete_credential(my_del)
                 print(
                     f"Credential with  account username {my_delete} has been removed succefully")
             elif short_code == "ex":
@@ -326,7 +326,7 @@ def main():
 
             elif short_code == "dl":
                 print("Enter the account username of the credential you would like to delete.")
-                my_delete = input("> ")
+                my_delete = input()
                 my_del = find_credential(my_delete)
                 Credential.credential_list.remove(my_del)
                 print(
